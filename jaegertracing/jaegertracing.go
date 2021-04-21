@@ -22,6 +22,7 @@ package jaegertracing
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"io"
 	"io/ioutil"
