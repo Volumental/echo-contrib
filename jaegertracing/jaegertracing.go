@@ -217,8 +217,8 @@ func TraceFunction(ctx echo.Context, fn interface{}, params ...interface{}) (res
 
 // CreateChildSpan creates a new opentracing span adding tags for the span name and caller details.
 // User must call defer `sp.Finish()`
-func CreateChildSpan(ctx echo.Context, name string) opentracing.Span {
-	parentSpan := opentracing.SpanFromContext(ctx.Request().Context())
+func CreateChildSpan(ctx context.Context, name string) opentracing.Span {
+	parentSpan := opentracing.SpanFromContext(ctx)
 	sp := opentracing.StartSpan(
 		name,
 		opentracing.ChildOf(parentSpan.Context()))
