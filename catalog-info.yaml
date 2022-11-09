@@ -2,9 +2,13 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: echo-contrib
+  title: Echo contribution
+  description: Echo community contribution 
   annotations:
     github.com/project-slug: Volumental/echo-contrib
+  tags:
+    - go
 spec:
-  type: other
-  lifecycle: unknown
+  type: tool
+  lifecycle: production
   owner: infrastructure
