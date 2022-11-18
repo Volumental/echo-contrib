@@ -9,6 +9,6 @@ metadata:
   tags:
     - go
 spec:
-  type: tool
+  type: library
   lifecycle: production
   owner: infrastructure
